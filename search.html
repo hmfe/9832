@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body id="search_body" onclick="clearSearch()">
+		<div class="search_container">
+			<img class="search_logo" src="logo.svg">
+			<form autocomplete="off" id="searchform" action="">
+		    	<input id="searchValue" name="searchValue" type="search" placeholder="Search movie.." value="" oninput="useValue()">
+		    	<input id="submit" type="submit" name="submit" value="Submit">
+			</form>
+			<div id="maybe"></div>
+			<h2 id="searchresinfo">Search result</h2>
+			<div id="results">
+				<p id="res-title"></p>
+			</div>
+			<h2 id="searchhistoryinfo">Search history <span onclick="clearAll()">Clear all</span></h2>
+			<div id="prev_searches"></div>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
